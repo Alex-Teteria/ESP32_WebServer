@@ -1,4 +1,4 @@
-# ESP32_WebServer
+ESP32 WebServer
 ESP32 WebServer, micropython
 
 Вебсервер на ESP32
