@@ -1,6 +1,10 @@
 ESP32 WebServer
 ESP32 WebServer, micropython
 
+![Web_Server_ESP32](https://github.com/Alex-Teteria/ESP32_WebServer/assets/94607514/bd589e06-e20f-4a68-a96c-377100244412)
+
+
+
 Вебсервер на ESP32
 ----------------------------------------------------------------------
 v.3 18.07.2023
