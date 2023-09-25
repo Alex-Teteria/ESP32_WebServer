@@ -1,3 +1,87 @@
+A simple HTTP server based monitoring and control system on ESP32 MicroPython
+
+V0.16, 07.09.2023
+
+Author: Oleksandr Teteria
+
+Requires: ESP32 Board. Any firmware version dated 2020 or later. For temperature, humidity, pressure monitoring - sensor modules BMP280, DHT22. To control external devices - a relay module.
+
+# Contents
+
+1. [Overview](./README.md#1-overview)
+2. [Design](./README.md#2-design)  
+  2.1 [Future development](./README.md#21-future-development)
+3. [Getting Started](./README.md#3-getting-started)
+4. [The DFT class](./README.md#4-the-dft-class)  
+  4.1 [Conversion types](./README.md#41-conversion-types)  
+  4.2 [The populate function](./README.md#42-the-populate-function)  
+  4.3 [The window function](./README.md#43-the-window-function)  
+  4.4 [FORWARD transform](./README.md#44-forward-transform)  
+  4.5 [REVERSE transform](./README.md#45-reverse-transform)  
+  4.6 [POLAR transform](./README.md#46-polar-transform)  
+  4.7 [DB transform](./README.md#47-db-transform)
+5. [The DFTADC class](./README.md#5-the-dftadc-class)
+6. [Implementation](./README.md#6-implementation)
+7. [Note for beginners](./README.md#7-note-for-beginners)
+8. [Performance](./README.md#8-performance)
+9. [Whimsical observations](./README.md#9-whimsical-observations)
+
+# 1. Overview
+
+The web server is implemented based on ESP32 MicroPython. The BMP280 sensor module was used for pressure monitoring. A DHT22 sensor module is used to monitor temperature and humidity. To display information, a WS2812 matrix is ​​used, which is controlled by a Raspberry Pi Pico microcontroller. The MicroPython web server, using the ESP32 microcontroller board, allows you to control the relay module. Communication between raspberry pi pico and ESP32 controllers via the UART interface.
+
+A general view of the user interface served by our web server is presented at [HTTP-ESP32-Server](https://alex-teteria.github.io/MicroPython-HTTP-Server-Templates/). The web server serves this HTML page with values ​​or template variables that need to be resolved based on sensor values ​​and commands or data from the client.
+
+Login to the user page is carried out by entering a password. The SHA-256 hashing algorithm is used to protect the password during transmission. The digest is the result of the hash function of the entered password + the initialization vector (a random string received from the server).
+
+The RSA cryptoalgorithm is used to send a new password when the user changes it.
+
+Web server configuration is done through an HTML page.
+
+# 2. Design
+
+Below is a diagram of the entire system, which consists of a web server on an ESP-32, a display controller for a WS2812 matrix on a Raspberry Pi Pico, sensor modules and a relay module.
+
+![](file://D:\Install\Web_Server_ESP32.jpg?msec=1695644382156)
+
+This is what a system prototype can look like, which is implemented on development boards for ESP32 and Raspberry PI Pico :)
+
+![](file://C:\Users\abomi\Documents\prototype_ESP32_server.jpg?msec=1695642922448)
+
+Вебсервер на ESP32
+
+v.3 18.07.2023
+
+Тестова реалізація пересилання інформації (в UTF-8), наприклад паролю,
+
+за допомогою криптоалгоритму RSA
+
+При цьому використовується попередньо згенерований комплект ключів (256-біт ):
+
+e - відкритий ключ, d - закритий ключ, n - модуль
+
+e = 51043438774548233641950217181619486452773730436605898213762454668635132686039
+
+d = 30388093249393602039543477556021704797418231605734484735286157927372132604455
+
+n = 66383224533134224209074383016602234671595944614998088611949189982033378801661
+
+Відкритий ключ та модуль відсилаються клієнту на GET запит path='/main_menu' або path='/'
+
+як змінні e та n javascript у файлі main_menu_3.html
+
+На стороні клієнта (web browser) функція changeNumber() викликається по події onsubmit,
+
+використовує дані, які введені в полі форми text, з ідентифікатором "myInput" (input = document.getElementById("myInput")),
+
+змінює їх на шифр (у вигляді числа) та вертає в поле вводу даних
+
+При цьому введені дані спочатку перетворюються на байтовий масив (uint8Array), потім
+
+цей байтовий масив перетворюється на ціле число типу BigInt функцією byteArrayToLong(byteArray) за алгоритмом:
+
+якщо байтовий масив [..., b3, b2, b1, b0], то ціле число буде:
+
 ESP32 WebServer
 ESP32 WebServer, micropython
 
