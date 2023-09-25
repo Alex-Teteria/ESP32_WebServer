@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="/favicon" type="image/png" />
+        <title>Connection settings</title>
+        <link rel="stylesheet" type="text/css" href="/button.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		</style>
+	</head>
+	<body bgcolor=#d4ecec>
+	<br>
+	<h1 align=center style="color: rgb(33, 88, 88)">Connection settings</h1>
+	<form align=center method="post">	
+		<h3 style="color: rgb(33, 88, 88)">Choose connect mode:</h3>
+		<input type="radio" id="Access point" name="connect_mode" value="Access point mode" %s>
+		<label for="Access point">Access point mode</label>
+		<input type="radio" id="Station" name="connect_mode" value="Station mode" %s>
+		<label for="Station">Station mode</label><br><br>
+		<h3 style="color: rgb(33, 88, 88)">Settings for Station mode:</h3>
+		<label for="ssid">SSID:</label><br>
+		<input type="text" id="ssid" name="ssid" value="%s"><br>
+		<label for="ssid_pwd">Password:</label><br>
+		<input type="password" id="ssid_pwd" name="ssid_pwd"><br>
+		<br><br>
+		<h3 style="color: rgb(33, 88, 88)">Settings for Access point mode:</h3>
+		<label for="ssid_ap">SSID:</label><br>
+		<input type="text" id="ssid_ap" name="ssid_ap" value="%s"><br>
+		<label for="ap_pwd">Password:</label><br>
+		<input type="password" id="ap_pwd" name="ap_pwd"><br>
+		<label for="ip">IP address:</label><br>
+		<input type="text" id="ip" name="ip" value="%s"><br>
+		<label for="mask">Subnet mask:</label><br>
+		<input type="text" id="mask" name="mask" value="%s"><br>
+		<label for="gw">Gateway:</label><br>
+		<input type="text" id="gw" name="gw" value="%s"><br>
+		<label for="dns">DNS server:</label><br>
+		<input type="text" id="dns" name="dns" value="%s"> *</>
+		<p>* Since we have no connection to the internet, it doesn't matter </p>
+		<br>
+		<button type="submit">Submit</button>
+		<button onclick="window.location.href='reboot.html'; return false;">Reboot</button>
+		<button onclick="window.location.href='/'; return false;">Main menu</button>
+	</form>
+	</body>
+</html>

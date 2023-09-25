@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sens status</title>
+        <link rel="shortcut icon" href="/favicon" />
+        <link rel="stylesheet" type="text/css" href="/button.css">
+        <link rel="stylesheet" type="text/css" href="/sens_status.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sensor status</title>
+        <style>
+        </style>
+    </head>
+    <body bgcolor=#d4ecec>
+        <br><br>
+		<h1 align=center style="color: rgb(33, 88, 88)">Sensor status:</h1>
+        <div id="container">
+				<div class="div-On" align=center>%s</div>
+				<div class="div-On" align=center>%s</div>
+				<div class="div-On" align=center>%s</div>
+				<div class="%s" align=center>Sensor 4</div>
+        </div>
+        <form align=center>
+            <button onclick="window.location.href='sens_status.html'; return false;">Update</button>
+            <button onclick="window.location.href='sens_to_led.html'; return false;">Send To LEDs</button>
+            <button onclick="window.location.href='/'; return false;">Main menu</button>
+        </form>
+	</body>
+</html>

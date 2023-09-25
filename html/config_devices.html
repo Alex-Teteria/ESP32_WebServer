@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="/favicon" type="image/png" />
+        <title>Devices settings</title>
+        <link rel="stylesheet" type="text/css" href="/button.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		</style>
+	</head>
+	<body bgcolor=#d4ecec>
+	<br>
+	<h1 align=center style="color: rgb(33, 88, 88)">Setting the initial state of devices</h1>
+	<form align=center method="post">	
+		<h3 style="color: rgb(33, 88, 88)">Choose initial setting for relay #1:</h3>
+		<input type="radio" id="relay1 on" name="relay1" value="On" %s>
+		<label for="relay1 on">On</label>
+		<input type="radio" id="relay1 off" name="relay1" value="Off" %s>
+		<label for="relay1 off">Off</label><br><br>
+		
+		<h3 style="color: rgb(33, 88, 88)">Choose initial setting for relay #2:</h3>
+		<input type="radio" id="relay2 on" name="relay2" value="On" %s>
+		<label for="relay1 on">On</label>
+		<input type="radio" id="relay2 off" name="relay2" value="Off" %s>
+		<label for="relay1 off">Off</label><br><br>	
+		
+		<button type="submit">Submit</button>
+		<button onclick="window.location.href='/'; return false;">Main menu</button>
+	</form>
+	</body>
+</html>

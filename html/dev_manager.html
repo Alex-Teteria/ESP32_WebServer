@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sensor manager</title>
+        <link rel="shortcut icon" href="/favicon" />
+        <link rel="stylesheet" type="text/css" href="button.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+			.On {
+            width: 100px;
+            background-color: red;
+				}
+			.On:hover{
+            background-color: #fc4d4d;
+                }
+            .On:active {
+            background-color: #fd9999;
+                }
+            .Off {
+            width: 100px;
+            background-color: silver;
+				}	
+			.Off:hover{
+            background-color: gray;
+                }
+            .Off:active {
+            background-color: #fd9999;
+                }
+                
+			.container {
+			display: flex;
+			justify-content: center;
+            flex-wrap: wrap;
+			margin: 20px;
+			padding: 20px;
+			border: solid 2px black; 
+            }
+	
+        </style>
+    </head>
+    <body bgcolor=#d4ecec>
+		<br><br><br>
+		<h1 align=center style="color: rgb(33, 88, 88)">Device management</h1>
+		<br><br>
+		<div class="container">
+			<h2 align=center style="color: rgb(33, 88, 88)">Relay #1</h1>
+			<div>
+				<button class="%s" onclick="window.location.href='dev_manager.html?dev1'; return false;">%s</button>
+			</div>	
+			<div>
+				<img src="%s" style="width:160px">
+			</div>
+		</div>
+				
+		<div class="container">
+			<h2 align=center style="color: rgb(33, 88, 88)">Relay #2</h1>
+			<div>
+				<button class="%s" onclick="window.location.href='dev_manager.html?dev2'; return false;">%s</button>
+			</div>	
+			<div>
+				<img src="%s" style="width:160px">
+			</div>
+		</div>
+        <br><br><br>
+		
+        <form align=center>
+            <button onclick="window.location.href='/'; return false;">Main menu</button>
+        </form>
+	</body>
+</html>

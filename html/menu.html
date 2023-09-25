@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="shortcut icon" href="/favicon" type="image/png" />
+        <title>Main menu</title>
+        <link rel="stylesheet" type="text/css" href="menu.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+</style>
+
+</head>
+<body bgcolor=#d4ecec>
+<center>
+    <h1>Main menu</h1>
+</center>
+<br>
+<br>
+<br>
+<center>
+    <h1>ESP32 Web Server<h1>
+</center>
+
+<div class="burger-menu">
+    <input id="menu-toggle" type="checkbox" %s>
+    <label class="menu-btn" for="menu-toggle">
+      <span></span>
+    </label>
+
+    <ul class="menubox">
+			<li><a class="menu-item" href="sens_status.html">Sensor Status</a></li>
+			<li><a class="menu-item" href="dev_manager.html">Devices Management</a></li>
+			<li><a class="menu-item" href="send_text.html">Send Text</a></li>
+			<li><a class="menu-item" onclick="url()">Send Time</a></li>
+			<li><a class="menu-item" href="settings.html">Settings</a></li>
+			<li><a class="menu-item" href="logout.html">Exit</a></li>
+    </ul>
+  </div>
+  		<script>
+	      function url(){
+			let now = new Date();
+			window.open('send_time.html?'+now.getHours()+':'+now.getMinutes(), '_self')
+			}
+		</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sensor manager</title>
+        <link rel="shortcut icon" href="/favicon" />
+        <link rel="stylesheet" type="text/css" href="/button.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+			#led {
+            width: 200px;
+            height: 40px;
+            font-size: 14px;
+            background-color: %s;
+				}
+        </style>
+    </head>
+    <body bgcolor=#d4ecec>
+		<br><br><br>
+		<h1 align=center style="color: rgb(33, 88, 88)">Device management</h1>
+		<br><br><br>
+		<form align=center>
+            <button id="led" onclick="window.location.href='../%s'; return false;">%s</button>
+        </form>
+        <center>Click the button to turn %s the led</center>
+        <br><br><br>
+        <form align=center>
+            <button onclick="window.location.href='/'; return false;">Main menu</button>
+        </form>
+	</body>
+</html>
