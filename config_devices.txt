@@ -1,0 +1,2 @@
+relay2:Off
+relay1:On

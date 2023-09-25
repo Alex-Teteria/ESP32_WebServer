@@ -1,0 +1,9 @@
+ip:192.168.8.2
+wlan_id:Mikro2
+ssid:ESP-32
+gw:192.168.8.1
+password:12345678
+dns:8.8.8.8
+wlan_pass:196613036594
+subnet_mask:255.255.255.0
+ap_mode:
