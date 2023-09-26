@@ -30,7 +30,7 @@ Web server configuration is done through an HTML page.
 
 Below is a diagram of the entire system, which consists of a web server on an ESP32, a display controller for a WS2812 matrix on a Raspberry Pi Pico, sensor modules and a relay module.
 
-![Web_Server_ESP32](https://github.com/Alex-Teteria/ESP32_WebServer/assets/94607514/2a11045d-92b0-40e1-8e23-d1bf7e7ca4c1)
+![Web_Server_ESP32](https://github.com/Alex-Teteria/ESP32_WebServer/assets/94607514/c95d6783-9925-4b2d-9df0-e8523f57d33a)
 
 This is what a system prototype can look like, which is implemented on development boards for ESP32 and Raspberry PI Pico :)
 
