@@ -34,7 +34,7 @@ Below is a diagram of the entire system, which consists of a web server on an ES
 
 This is what a system prototype can look like, which is implemented on development boards for ESP32 and Raspberry PI Pico :)
 
-![prototype_ESP32_server](https://github.com/Alex-Teteria/ESP32_WebServer/assets/94607514/7966f2d1-a547-478b-a552-6a9daa4e816f)
+![prototype_ESP32_server](https://github.com/Alex-Teteria/ESP32_WebServer/assets/94607514/2739e16c-b8d9-4784-b28f-e74e0fccd80b)
 
 ###### [Top](./README.md#contents)
 
