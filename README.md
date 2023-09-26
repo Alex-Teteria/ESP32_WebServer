@@ -11,8 +11,8 @@ Requires: ESP32 Board. Any firmware version dated 2020 or later. For temperature
 1. [Overview](./README.md#1-overview)
 2. [Design](./README.md#2-design)
 3. [Install](./README.md#3-install)
-4. [Monitoring and control capabilities](./README.md#4-monitoring)
-5. [Implementation stages and some explanations](./README.md#5-implementation)
+4. [Monitoring and control capabilities](./README.md#4-monitoring-and-control-capabilities)
+5. [Implementation stages and some explanations](./README.md#5-implementation-stages-and-some-explanations)
 
 # 1. Overview
 
