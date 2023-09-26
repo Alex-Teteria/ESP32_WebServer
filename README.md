@@ -36,7 +36,7 @@ This is what a system prototype can look like, which is implemented on developme
 
 ![prototype_ESP32_server](https://github.com/Alex-Teteria/ESP32_WebServer/assets/94607514/7966f2d1-a547-478b-a552-6a9daa4e816f)
 
-3. Install
+# 3. Install
 
 Upload all of these to your project folder. When downloading, you should keep the same placement of files in folders. Use [Thonny IDE](https://thonny.org/) or other IDE for upload your code in ESP32 board.
 
