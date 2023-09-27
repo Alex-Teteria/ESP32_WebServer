@@ -62,7 +62,7 @@ Upload all of these to your project folder. When downloading, you should keep th
 - Control of external devices through the relay module.
 - Sending sensor readings for display on a WS2812 type LED display
 
-Sending data for display on a WS2812 type LED display:    
+Sending data for display on a WS2812 type LED display:
 - sensor readings;
 - some text;
 - current time.
