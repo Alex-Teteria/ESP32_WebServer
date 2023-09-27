@@ -61,12 +61,10 @@ Upload all of these to your project folder. When downloading, you should keep th
 - Obtaining the pressure value using the BMP280 module.
 - Control of external devices through the relay module.
 - Sending sensor readings for display on a WS2812 type LED display
-
-Sending data for display on a WS2812 type LED display:
-- sensor readings;
-- some text;
-- current time.
-
+- Sending data for display on a WS2812 type LED display:
+  - sensor readings;
+  - some text;
+  - current time.
 - Ability to choose Wi-Fi connection mode - Station mode or Access point mode with appropriate network settings.
 - It is possible to set the initial state of the relay.
 - Login to the server using a password that is protected when forwarding by the SHA-256 hashing algorithm.
